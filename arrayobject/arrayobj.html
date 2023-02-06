@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // array of object
+        const arrayObject = [
+                {title : 'Spiderman', director :'stan lee', alreadyWatched : true},
+                {title : 'inception', director :'christoper', alreadyWatched : false},
+                {title : 'pathan', director :'yash raj', alreadyWatched : true},
+                {title : 'yodha', director :'sagar ambre', alreadyWatched : false},
+                {title : 'mission majnu', director :'yash raj', alreadyWatched : true}
+        ];
+        console.log(arrayObject);
+        // for(let i=0; i< arrayObject.length;i++)
+        // {
+        //     let element= arrayObject.find(item) => item.title==='spiderman';
+        // }
+
+        function movie(movietitle){
+            return movietitle.alreadyWatched === false;
+        }
+        console.log(arrayObject.find(movie));
+
+    </script>
+</body>
+</html>
