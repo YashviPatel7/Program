@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard-inventory</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="wapper d-flex">
+    <input type="checkbox" name="aside" id="toggle" class="display-none">
+    <aside class="sidebar d-flex">
+            <div>
+            <img src="./assets/images/logo.png" alt="logout" class="logo">
+           <ul class="items-ul">
+            <li class="item"><a href="#" class="item-link d-flex"><img src="./assets/images/home.png" alt="dashbord" class="margin-right-19">Dashboard</a></li>
+            <li class="item"><a href="#" class="item-link d-flex"><img src="./assets/images/purchase.png" alt="inventory" class="margin-right-19">Inventory</a></li>
+            <li class="item"><a href="#" class="item-link d-flex"><img src="./assets/images/chart.png" alt="report" class="margin-right-19">Reports</a></li>
+            <li class="item"><a href="#" class="item-link d-flex"><img src="./assets/images/admin.png" alt="Supplier" class="margin-right-19">Suppliers</a></li>
+            <li class="item"><a href="#" class="item-link d-flex"><img src="./assets/images/box.png" alt="Orders" class="margin-right-19">Orders</a></li>
+            <li class="item"><a href="#" class="item-link d-flex"><img src="./assets/images/ManageStore.png" alt="ManageStore" class="margin-right-19">Manage Store</a></li>
+           </ul> 
+            </div>
+            <ul class="items-ul">
+                <li class="item"><a href="#" class="item-link d-flex"><img src="./assets/images/setting.png" alt="seting" class="margin-right-19">Settings</a></li>
+                <li class="item"><a href="#" class="item-link d-flex"><img src="./assets/images/logout.png" alt="logout" class="margin-right-19">Log Out</a></li>
+            </ul>          
+    </aside>
+    <div class="main-content d-flex">
+    <header class="primary-header d-flex">
+        <div>   
+        <button class="btn-toggle"><label for="toggle"><img src="./assets/images/hambuger.png" alt="toggle"></label></button>
+        <input type="text" name="search" placeholder="Search,Product,Supplier,Order" class="search">
+        </div>
+        <div class="admin-detail d-flex">
+        <button class="btn-toggle"><img src="./assets/images/notifi.png" alt="notification"></button>
+        <button class="btn-avtar"><img src="./assets/images/lady.png" alt="lady" class="avtar"></button>
+        </div>
+    </header>
+    <main class="inventory-content d-flex">
+       
+        <div class="inventory-content-cards">
+        <h4 class="card-head">Overall Inventory</h4>
+        <section class="overrall-inventory d-flex">
+            
+            <div class="card d-flex">
+                <h3 class="card-header">Categories</h3>
+                <span class="caption-2">14</span>
+                <span class="caption-3">Last 7 days</span>
+            </div>
+            <div class="card2 d-flex">
+                <div class="card2-child1 d-flex">
+                <h3 class="card-head-orange">Total Products</h3>
+                <h4 class="caption-2">86</h4>
+                <span class="caption-3">Last 7 days</span>
+                </div>
+                <div class="card2-child2 d-flex">
+                    <h4 class="caption-4">25000</h4>
+                    <span class="caption-5">Revenue</span>
+                </div>
+            </div>
+            <div class="card2 d-flex">
+                <div class="card2-child1 d-flex">
+                <h3 class="card-head-purpal">Top Selling</h3>
+                <h4 class="caption-2">86</h4>
+                <span class="caption-3">Last 7 days</span>
+                </div>
+                <div class="card2-child2 d-flex">
+                    <h4 class="caption-4">25000</h4>
+                    <span class="caption-5">Revenue</span>
+                </div>
+            </div>
+            <div class="card2 d-flex">
+                <div class="card2-child1 d-flex">
+                <h3 class="card-head-red">Low Stocks</h3>
+                <h4 class="caption-2">86</h4>
+                <span class="caption-3">Last 7 days</span>
+                </div>
+                <div class="card2-child2 d-flex">
+                    <h4 class="caption-4">25000</h4>
+                    <span class="caption-5">Revenue</span>
+                </div>
+            </div>
+        </section>
+        </div>
+        
+        <section class="inventory-container">
+            <header class="secondary-header-btns d-flex">
+                <h2 class="card-head">Products</h2>
+                <div class="btns d-flex">
+                <button class="btn-add">Add Product</button>
+                <button class="btn-ranctangle d-flex"><img src="./assets/images/filterslines.png" alt="filter" class="margin-right-10">Filters</button>
+                <button class="btn-ranctangle">Download all</button>
+                </div>
+            </header>
+            <div class="table-section">
+                <table class="table">
+                    <thead>
+                        <th class="table-heading padding-left-16">Products</th>
+                        <th class="table-heading">Buying Price</th>
+                        <th class="table-heading">Quantity</th>
+                        <th class="table-heading">Threshold</th>
+                        <th class="table-heading">Expiry Date</th>
+                        <th class="table-heading">Availability</th>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Maggi</td>
+                            <td class="cell-data">430</td> 
+                            <td class="cell-data">43 Pack ets</td>
+                            <td class="cell-data">12 Packets</td >
+                            <td class="cell-data">11/12/22</td> 
+                            <td class="cell-in-stock">In- stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Bru</td>
+                            <td class="cell-data">257</t d>
+                            <td class="cell-data">22 Pack ets</td>
+                            <td class="cell-data">12 Packets</td >
+                            <td class="cell-data">21/12/22</td> 
+                            <td class="cell-out-stock">Out of stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Red Bull</td>
+                            <td class="cell-data">405</td> 
+                            <td class="cell-data">36 Pack ets</td>
+                            <td class="cell-data">9 Packets</td> 
+                            <td class="cell-data">5/12/22</td> 
+                            <td class="cell-in-stock">In-stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Bourn Bull</td>
+                            <td class="cell-data">502</td> 
+                            <td class="cell-data">14 Pack ets</td>
+                            <td class="cell-data">6 Packets</td> 
+                            <td class="cell-data">8/12/22</td> 
+                            <td class="cell-out-stock">Out of stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Horlicks</td>
+                            <td class="cell-data">530</td> 
+                            <td class="cell-data">5 Packe ts</td>
+                            <td class="cell-data">5 Packets</td >
+                            <td class="cell-data">9/1/23</td> 
+                            <td class="cell-in-stock">In- stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Harpic</td>
+                            <td class="cell-data">605</td> 
+                            <td class="cell-data">10 Pack ets</td>
+                            <td class="cell-data">5 Packets</td> 
+                            <td class="cell-data">9/1/23</td> 
+                            <td class="cell-in-stock">In- stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Ariel</td>
+                            <td class="cell-data">408</td> 
+                            <td class="cell-data">23 Pack ets</td>
+                            <td class="cell-data">7 Packets</td> 
+                            <td class="cell-data">15/12/23</td> 
+                            <td class="cell-out-stock">Out of stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Scotch Brite</td>
+                            <td class="cell-data">359</td> 
+                            <td class="cell-data">43 Pack ets</td>
+                            <td class="cell-data">8 Packets</td> 
+                            <td class="cell-data">6/6/23</td> 
+                            <td class="cell-in-stock">In- stock</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Horlicks</td>
+                            <td class="cell-data">530</td> 
+                            <td class="cell-data">5 Packe ts</td>
+                            <td class="cell-data">5 Packets</td >
+                            <td class="cell-data">9/1/23</td> 
+                            <td class="cell-in-stock">In- stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Horlicks</td>
+                            <td class="cell-data">530</td> 
+                            <td class="cell-data">5 Packe ts</td>
+                            <td class="cell-data">5 Packets</td >
+                            <td class="cell-data">9/1/23</td> 
+                            <td class="cell-in-stock">In- stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Horlicks</td>
+                            <td class="cell-data">530</td> 
+                            <td class="cell-data">5 Packe ts</td>
+                            <td class="cell-data">5 Packets</td >
+                            <td class="cell-data">9/1/23</td> 
+                            <td class="cell-in-stock">In- stock</td>
+                        </tr>  
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Horlicks</td>
+                            <td class="cell-data">530</td> 
+                            <td class="cell-data">5 Packe ts</td>
+                            <td class="cell-data">5 Packets</td >
+                            <td class="cell-data">9/1/23</td> 
+                            <td class="cell-in-stock">In- stock</td>
+                        </tr>    
+                        <tr class="table-row">
+                            <td class="cell-data padding-left-16">Coca cola</td>
+                            <td class="cell-data">205</td> 
+                            <td class="cell-data">41 Pack ets</td>
+                            <td class="cell-data">10 Packets</td >
+                            <td class="cell-data">11/11/22</td> 
+                            <td class="cell-low-stock">Low stock</td>
+                        </tr>  
+                    </tbody>
+                </table>
+            </div>
+            <footer class="table-footer d-flex">
+                <button class="btn-ranctangle">Previous</button>
+                <span>Page 1 to 10</span>
+                <button class="btn-ranct-next">Next</button>
+            </footer>
+        </section>
+    </main>
+    </div>
+    </div>
+</body>
+</html>
