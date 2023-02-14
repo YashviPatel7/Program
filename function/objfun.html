@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objectkeyvalue</title>
+</head>
+
+<body>
+    <script>
+        //1. Write a JavaScript function to retrieve all the values of an object's properties.
+
+        let name = {
+            a: 101,
+            b: 202,
+            c: 303
+        }
+
+        function objvalue(value) {
+            return Object.values(name);
+        }
+        console.log(objvalue());
+
+        //2. Write a JavaScript function to convert an object into a list of `[key, value]` pairs.
+        let objlist = {
+            a: 111,
+            b: 222,
+            c: 333
+        }
+
+        function list(value) {
+            return Object.entries(value);
+        }
+        console.log(list(objlist));
+
+        //3. Write a JavaScript function to get a copy of the object where the keys have become the values and the values the keys.
+
+        let newobj = {};
+        for (const key in objlist) {
+            newobj[objlist[key]] = key;
+        }
+        console.log(newobj);
+
+        //4. Write a JavaScript program to find the most frequent item of an array.
+
+        let arr = [1, 1, 2, 6, 7, 3, 5, 8, 2, 2, 8, 3, 8, 8, 5, 3];
+        let n = arr.length;
+
+        function mostFrequent(arr, n) {
+            arr.sort();
+            let maxfreq = 1, mostfreq = arr[0];
+            let count = 1;
+
+            for (let i = 1; i < n; i++) {
+                if (arr[i] == arr[i - 1])
+                    count++;
+                else
+                    count = 1;
+
+                if (count > maxfreq) {
+                    maxfreq = count;
+                    mostfreq = arr[i - 1];
+                }
+            }
+            return mostfreq;
+        }
+        console.log(mostFrequent(arr, n));
+
+        //    5. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+
+        // newarr = new set(arr);
+
+        // 6. Write a JavaScript function to merge two arrays and removes all duplicates elements.
+
+        
+
+        // 7. Write a JavaScript function to remove a specific element from an array.
+        
+        let arr1 = ["valsad", "vapi", "pardi", "parnera", "ronvel"];
+
+        function removeone(value) {
+            console.log(value.splice(1,3));
+        
+        }
+        console.log(removeone(arr1));
+
+        // 8. Write a JavaScript function to get a random item from an array.[1,2,3,4,5,6,7,8,9,10]
+
+        // 9. Write a JavaScript function to filter false, null, 0 and blank values from an array.[58, '', 'abcd', true, null, false, 0]
+
+        let arr2=[58, '', 'abcd', true, null, false, 0];
+
+        console.log(arr2.filter((value)=>{if(value===false || value===null || value===0 || value=="")
+        console.log(value)}));
+
+    </script>
+</body>
+
+</html>

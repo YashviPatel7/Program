@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <script>
+         //1.Write a JavaScript function that reverse a number
+            let result = 0;
+            let number = 123456789;
+
+            result = Number(String(number).split('').reverse().join(''));
+
+            console.log("Reversed number is : "+result);
+    
+
+         //2. Write a JavaScript function that returns a passed string with letters in alphabetical order.
+          let str="my name is aayan";
+
+          let words=str.split(' ');
+          console.log("words   "+words);
+          words.sort();
+
+          console.log('The sorted words are:');
+
+          for (const items of words) {
+            console.log(items);
+        }
+
+        // 3.Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+
+        function uppercase(str) {
+            let arr = str.split(' ');
+            let newarr = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                newarr.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
+            }
+            return newarr.join(' ');
+        }
+        console.log(uppercase("my name is yashvi"));
+
+    
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript function</title>
+</head>
+
+<body>
+    <script>
+
+        //1.Write a JavaScript function that reverse a number
+        function reverseNumber(n) {
+            n = n + "";
+            return n.split("").reverse().join("");
+        }
+        console.log(Number(reverseNumber(12345)));
+
+
+
+
+        //2. Write a JavaScript function that returns a passed string with letters in alphabetical order.
+
+
+        const string = 'my name is ayaan';
+
+        const words = string.split(' ');
+
+        words.sort();
+
+        console.log('The sorted words are:');
+
+        for (const items of words) {
+            console.log(items);
+        }
+
+
+        // 3.Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+        function uppercase(str) {
+            let arr = str.split(' ');
+            let newarr = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                newarr.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
+            }
+            return newarr.join(' ');
+        }
+        console.log(uppercase("my name is yashvi"));
+
+
+        // 4 .Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
+        function longest(str) {
+
+            str = str.split(" ")
+
+            return str.sort((a, b) => b.length - a.length)[0]
+        }
+
+        console.log(longest("Hello everyone how are you"));
+
+        // 5.Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string
+
+        function Countvowel(str) {
+
+            return str.replace(/[^aeiou]/g, "").length;
+        }
+
+        console.log(Countvowel("Hello"));
+        console.log(Countvowel("parameter"));
+
+        // 6.Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
+
+        // function LongCountryName(country_name) {
+        //     return country_name.reduce(function (lname, country) {
+        //         return lname.length > country.length ? lname : country;
+        //     },
+        //         "");
+        // }
+        // console.log(LongCountryName(["Australia", "Gujarat", "United States of America"]));
+    </script>
+</body>
+
+</html>
