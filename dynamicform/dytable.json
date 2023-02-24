@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "form": [
+    {
+      "fname": "mahi",
+      "techname": "QA",
+      "id": 9
+    },
+    {
+      "fname": "viren",
+      "techname": "java",
+      "id": 14
+    },
+    {
+      "fname": "yashvi",
+      "techname": "frontend",
+      "id": 16
+    },
+    {
+      "fname": "tanvi",
+      "techname": "BA",
+      "id": 17
+    },
+    {
+      "fname": "tanvi",
+      "techname": "BA",
+      "id": 18
+    },
+    {
+      "fname": "viren",
+      "techname": "frontend",
+      "id": 19
+    },
+    {
+      "fname": "mina",
+      "techname": "java",
+      "id": 20
+    },
+    {
+      "fname": "yashvi",
+      "techname": "RPA",
+      "id": 21
+    }
+  ]
+}
