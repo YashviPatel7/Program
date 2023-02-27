@@ -1,7 +1,3 @@
-
-
-
-
 var form=document.querySelector('form');
 
   // add the data in table
@@ -31,7 +27,7 @@ let table=document.createElement("table");
 
 
 // add header
-let header={"id":"ID","fname":"Name","techname":"Technology","action":"Action"};
+let header={"id":"ID","fname":"Full Name","techname":"Technology","action":"Action"};
 
 function tablehead(table,data){
     let thead=document.createElement('thead');
@@ -74,7 +70,7 @@ fetch('http://localhost:3000/form')
 
          let td4=document.createElement("td");
          let btnDelete=document.createElement("button");
-         btnDelete.className="Delete";
+         btnDelete.className="btn-delete";
          let deleteText=document.createTextNode("Delete");
          btnDelete.appendChild(deleteText);
 

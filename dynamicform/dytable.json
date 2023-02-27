@@ -8,44 +8,44 @@
   ],
   "form": [
     {
-      "fname": "mahi",
+      "fname": "Bhargav Patel",
       "techname": "QA",
       "id": 9
     },
     {
-      "fname": "viren",
-      "techname": "java",
-      "id": 14
-    },
-    {
-      "fname": "yashvi",
+      "fname": "Yashvi Patel",
       "techname": "frontend",
       "id": 16
     },
     {
-      "fname": "tanvi",
-      "techname": "BA",
-      "id": 17
-    },
-    {
-      "fname": "tanvi",
+      "fname": "Anamika Patel",
       "techname": "BA",
       "id": 18
     },
     {
-      "fname": "viren",
+      "fname": "Viren Patel",
       "techname": "frontend",
       "id": 19
     },
     {
-      "fname": "mina",
+      "fname": "Mina Tandel",
       "techname": "java",
       "id": 20
     },
     {
-      "fname": "yashvi",
-      "techname": "RPA",
-      "id": 21
+      "fname": "Minaxi Desai",
+      "techname": ".net",
+      "id": 22
+    },
+    {
+      "fname": "Rajiv patel",
+      "techname": "QA",
+      "id": 23
+    },
+    {
+      "fname": "Yashvi Patel",
+      "techname": ".net",
+      "id": 24
     }
   ]
 }
