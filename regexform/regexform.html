@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regexform</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div>
+                <label for="fname">First Name:</label><br>
+                <input type="text" name="firstname" id="fname" class="inputtxt" value="" placeholder="Enter First Name">
+                <span id="fnameerror" class="text-dangure"></span>
+            </div>
+            <div>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" name="lastname" id="lname" class="inputtxt" placeholder="Enter Last Name">
+                <span id="lnameerror" class="text-dangure"></span>
+            </div>
+            <div>
+                <label for="phonenumber">Phonenumber :</label><br>
+                <input type="number" name="phonenumber" id="phonenumber" class="inputtxt" placeholder="Enter Phonenumber">
+                <span id="phoneerror" class="text-dangure"></span>
+            </div>
+            <div>
+                <label for="EmailID">Email ID :</label><br>
+                <input type="text" name="email" id="email" class="inputtxt" placeholder="Enter Email ID">
+                <span id="emailerror" class="text-dangure"></span>
+            </div>
+            <div>
+                <label for="pass">Password :</label><br>
+                <input type="text" name="pass" id="pass" class="inputtxt" placeholder="Enter Password">
+                <span id="passerror" class="text-dangure"></span>
+            </div>
+            <div>
+                <label for="salary">Salary :</label><br>
+                <input type="number" name="salary" id="salary" class="inputtxt" placeholder="Enter Salary">
+                <span id="salaryerror" class="text-dangure"></span>
+            </div>
+            <button id="btn-submit">Submit</button>
+        </form>
+        <script src="./assets/js/validation.js"></script>
+    </div>
+</body>
+
+</html>
