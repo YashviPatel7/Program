@@ -11,40 +11,65 @@
 
 <body>
     <div class="container">
-        <form>
-            <div>
-                <label for="fname">First Name:</label><br>
-                <input type="text" name="firstname" id="fname" class="inputtxt" value="" placeholder="Enter First Name">
+        <form class="container-form">
+            <div class="margin-b-40">
+                <label for="fname">First Name :*</label><br>
+                <input type="text" name="firstname" id="fname" class="inputtxt" placeholder="Enter First Name"><br>
                 <span id="fnameerror" class="text-dangure"></span>
             </div>
-            <div>
-                <label for="lname">Last Name:</label><br>
-                <input type="text" name="lastname" id="lname" class="inputtxt" placeholder="Enter Last Name">
+            <div class="margin-b-40">
+                <label for="lname">Last Name :*</label><br>
+                <input type="text" name="lastname" id="lname" class="inputtxt" placeholder="Enter Last Name"><br>
                 <span id="lnameerror" class="text-dangure"></span>
             </div>
-            <div>
-                <label for="phonenumber">Phonenumber :</label><br>
-                <input type="number" name="phonenumber" id="phonenumber" class="inputtxt" placeholder="Enter Phonenumber">
+            <div class="margin-b-40">
+                <label for="phonenumber">Phonenumber :*</label><br>
+                <input type="number" name="phonenumber" id="phonenumber" class="inputtxt"
+                    placeholder="Enter Phonenumber"><br>
                 <span id="phoneerror" class="text-dangure"></span>
             </div>
-            <div>
-                <label for="EmailID">Email ID :</label><br>
-                <input type="text" name="email" id="email" class="inputtxt" placeholder="Enter Email ID">
+            <div class="margin-b-40">
+                <label for="EmailID">Email ID :*</label><br>
+                <input type="text" name="email" id="email" class="inputtxt" placeholder="username@gmail.com"><br>
                 <span id="emailerror" class="text-dangure"></span>
             </div>
-            <div>
-                <label for="pass">Password :</label><br>
-                <input type="text" name="pass" id="pass" class="inputtxt" placeholder="Enter Password">
+            <div class="margin-b-40">
+                <label for="pass">Password :*</label><br>
+                <input type="password" name="pass" id="pass" class="inputtxt" placeholder="Enter Password">
+                <span onclick="eyeShowhide()">
+                    <button> <img src="./assets/images/eye.png" alt="eye" id="eyehide"></button>
+                    <button> <img src="./assets/images/eyeslash.png" alt="eyeslash" id="eyeslashhide"></button>
+                </span><br>
                 <span id="passerror" class="text-dangure"></span>
+
             </div>
-            <div>
-                <label for="salary">Salary :</label><br>
-                <input type="number" name="salary" id="salary" class="inputtxt" placeholder="Enter Salary">
+            <div class="margin-b-40">
+                <label for="salary">Salary :*</label><br>
+                <input type="number" name="salary" id="salary" class="inputtxt" placeholder="Enter Salary"><br>
                 <span id="salaryerror" class="text-dangure"></span>
             </div>
             <button id="btn-submit">Submit</button>
         </form>
+
         <script src="./assets/js/validation.js"></script>
+        <script>
+            function eyeShowhide() {
+                var x = document.getElementById('pass');
+                var y = document.getElementById('eyehide');
+                var z = document.getElementById('eyeslashhide');
+
+                if (x.type === 'password') {
+                    x.type = "text";
+                    y.style.display = "block";
+                    z = style.display = "none";
+                }
+                else {
+                    x.type = "password";
+                    y.style.display = "none";
+                    z = style.display = "block";
+                }
+            }
+        </script>
     </div>
 </body>
 

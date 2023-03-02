@@ -1,141 +1,186 @@
-var form=document.querySelector('form');
+var form = document.querySelector('form');
 
-  // add the data in table
-form.addEventListener('submit',(e)=>{
+// add the data in table
+form.addEventListener('submit', (e) => {
 
   e.preventDefault();
-  
-  var fname=document.getElementById("fname").value;
-  var techname=document.getElementById("techname").value;
-  
+
+  var fname = document.getElementById("fname").value;
+  var techname = document.getElementById("techname").value;
+
   fetch('http://localhost:3000/form', {
-      method: 'POST',
-      body:JSON.stringify({
-        fname:fname,
-        techname:techname
-      }),
-      headers: {
-                "Content-Type": "application/json; charset=UTF-8"
-              }
-            })
-            .catch(error => console.error(error))
+    method: 'POST',
+    body: JSON.stringify({
+      fname: fname,
+      techname: techname
+    }),
+    headers: {
+      "Content-Type": "application/json; charset=UTF-8"
+    }
+  })
+    .catch(error => console.error(error))
 });
 
 
-let body=document.querySelector('body');
-let table=document.createElement("table");
+
+let body = document.querySelector('body');
+let table = document.createElement("table");
+table.className = "myTable";
 
 
 // add header
-let header={"id":"ID","fname":"Full Name","techname":"Technology","action":"Action"};
+let header = { "id": "ID", "fname": "Full Name", "techname": "Technology", "action": "Action" };
 
-function tablehead(table,data){
-    let thead=document.createElement('thead');
-    table.appendChild(thead);
-    let tr=document.createElement('tr');
-    thead.appendChild(tr);
-    for (const key in data) {
-        let th=document.createElement('th');
-        tr.appendChild(th);
-        let text=document.createTextNode(data[key]);
-        th.appendChild(text);
-       
-    }
+function tablehead(table, data) {
+  let thead = document.createElement('thead');
+  table.appendChild(thead);
+  let tr = document.createElement('tr');
+  thead.appendChild(tr);
+  for (const key in data) {
+    let th = document.createElement('th');
+    tr.appendChild(th);
+    let text = document.createTextNode(data[key]);
+    th.appendChild(text);
+
+  }
 }
-tablehead(table,header);
+tablehead(table, header);
 // console.log(table);
 
 
 fetch('http://localhost:3000/form')
-    .then(response=>response.json())
-    .then(data=>{
-      let tbody=table.createTBody();
-      for (const element of data) {
-         let tr=document.createElement("tr");
+  .then(response => response.json())
+  .then(data => {
+    let tbody = table.createTBody();
+    for (const element of data) {
+      let tr = document.createElement("tr");
+      tr.className = "tr";
+      let td1 = document.createElement("td");
+      let text1 = document.createTextNode(element["id"]);
+      td1.appendChild(text1);
+      tr.appendChild(td1);
 
-         let td1=document.createElement("td");
-         let text1=document.createTextNode(element["id"]);
-         td1.appendChild(text1);
-         tr.appendChild(td1);
+      let td2 = document.createElement("td");
+      let text2 = document.createTextNode(element["fname"]);
+      td2.appendChild(text2);
+      tr.appendChild(td2);
 
-         let td2=document.createElement("td");
-         let text2=document.createTextNode(element["fname"]);
-         td2.appendChild(text2);
-         tr.appendChild(td2);
+      let td3 = document.createElement("td");
+      let text3 = document.createTextNode(element["techname"]);
+      td3.appendChild(text3);
+      tr.appendChild(td3);
 
-         let td3=document.createElement("td");
-         let text3=document.createTextNode(element["techname"]);
-         td3.appendChild(text3);
-         tr.appendChild(td3);
+      let td4 = document.createElement("td");
+      let btnDelete = document.createElement("button");
+      btnDelete.className = "btn-delete";
+      let deleteText = document.createTextNode("Delete");
+      btnDelete.appendChild(deleteText);
 
-         let td4=document.createElement("td");
-         let btnDelete=document.createElement("button");
-         btnDelete.className="btn-delete";
-         let deleteText=document.createTextNode("Delete");
-         btnDelete.appendChild(deleteText);
+      // delete the row 
+      btnDelete.addEventListener('click', (e) => {
+        rowDelete(element["id"]);  //json delete database
+        table.deleteRow(tr.rowIndex)  // table in row
+      }
+      );
 
-     // delete the row 
-         btnDelete.addEventListener('click',(e)=>{
-          rowDelete(element["id"]);  //json delete database
-          table.deleteRow(tr.rowIndex)  // table in row
-    }
-    );
 
-    
-         let btnEdit=document.createElement("button");
-         btnEdit.className="Edit";
-         let editText=document.createTextNode("Edit");
-         btnEdit.appendChild(editText);
+      let btnEdit = document.createElement("button");
+      btnEdit.className = "Edit";
+      let editText = document.createTextNode("Edit");
+      btnEdit.appendChild(editText);
 
 
       // update employee
-      btnEdit.addEventListener('click',(e)=>{
-                 rowEdit(element)       
+      btnEdit.addEventListener('click', (e) => {
+        rowEdit(element)
+      }
+      );
+      td4.appendChild(btnDelete);
+      td4.appendChild(btnEdit);
+      tr.appendChild(td4);
+      tbody.appendChild(tr);
     }
-    );    
-         td4.appendChild(btnDelete);
-         td4.appendChild(btnEdit);
-         tr.appendChild(td4);
-         tbody.appendChild(tr);
-      }
-    })
-    .catch(error => console.error(error));
+  })
+  .catch(error => console.error(error));
 
-    function rowDelete(row){
-      fetch(`http://localhost:3000/form/${row}`,{method : 'DELETE'})
-      }
+function rowDelete(row) {
+  fetch(`http://localhost:3000/form/${row}`, { method: 'DELETE' })
+}
 let updatebtn = document.getElementById("btn-update");
 
 
-      function rowEdit(element){
+function rowEdit(element) {
 
-        let fname=document.getElementById("fname");
-        let techname=document.getElementById("techname");
-        fname.value=element.fname;
-        techname.value=element.techname;
+  let fname = document.getElementById("fname");
+  let techname = document.getElementById("techname");
+  fname.value = element.fname;
+  techname.value = element.techname;
 
-        updatebtn.addEventListener("click",(event)=>{
-        //event.preventDefault();
-          let newData = {
-           
-            fname: fname.value,
-            techname:techname.value
-          }
+  updatebtn.addEventListener("click", (event) => {
+    //event.preventDefault();
+    let newData = {
 
-          fetch(`http://localhost:3000/form/${element.id}`,{
-            method: 'PUT',
-            body:JSON.stringify(
-              newData
-            ),
-            headers: {
-                      "Content-Type": "application/json; charset=UTF-8"
-                    }
-                  }).then(res=>res.json())
-                  .then(data=>console.log(data))
-                  .catch(err=>console.log(err))
-        })
+      fname: fname.value,
+      techname: techname.value
+    }
 
+    fetch(`http://localhost:3000/form/${element.id}`, {
+      method: 'PUT',
+      body: JSON.stringify(
+        newData
+      ),
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8"
       }
+    }).then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
+  })
 
-      // document.getElementsByClassName("update-btn").setAttribute("style",": 20px");
+}
+//-----------------------------------
+//add search bar
+// function searchFun() {
+//   let filter = document.querySelector('.search');
+//   console.log(filter.value);
+//   let mytable = document.getElementById('table');
+//   let tr = document.getElementsByTagName('tr');
+//   console.log(tr);
+
+//   for (i = 0; i < tr.length; i++) {
+//     let td = tr[i].getElementsByTagName('td')[1];
+//     console.log(td);
+
+//     let textvalue = td.textContent || td.innerHTML;
+//     if (textvalue.indexOf(filter) > -1) {
+//       tr[i].style.display = "";
+//     } else {
+//       tr[i].style.display = "none";
+//     }
+
+//   }
+// }
+function searchFun() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  console.log(filter);
+  table = document.getElementById("myTable");
+  tr = document.getElementsByClassName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+
+//----------------------------------------------------------------
+// document.getElementsByClassName("update-btn").setAttribute("style",": 20px");
 body.appendChild(table);

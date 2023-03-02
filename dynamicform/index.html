@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,29 @@
     <title>Dynamic Table</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <header class="header"><h1 class="heading">Employee Information</h1></header>
+    <header class="header">
+        <h1 class="heading">Employee Information</h1>
+    </header>
     <form id="form">
-        
+
         <label for="fname">Full Name :</label>
         <input type="text" name="fname" id="fname" placeholder="Enter Employee Name" required><br><br>
 
         <label for="techname">Technology :</label>
         <input type="text" name="techname" id="techname" placeholder="Enter Employee Technology" required><br><br>
         <!-- <button class="btn-save">Save Employee</button> -->
-        </div>
+        <input type="text" name="search" placeholder="Search Items.." id="search" onkeyup="searchFun()">
         <input type="submit" value="Save Employee" class="btn-save">
     </form>
-    
-    <button id="btn-update" class="update-btn" >Update Employee</button><br>
+
+    <button id="btn-update" class="update-btn">Update Employee</button><br>
     <div id="result">
 
     </div>
-    
+
     <script src="./assets/js/table.js"></script>
 </body>
+
 </html>

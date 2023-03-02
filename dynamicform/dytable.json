@@ -46,6 +46,31 @@
       "fname": "Yashvi Patel",
       "techname": ".net",
       "id": 24
+    },
+    {
+      "fname": "yashvi",
+      "techname": ".net",
+      "id": 25
+    },
+    {
+      "fname": "yashvi",
+      "techname": "BA",
+      "id": 26
+    },
+    {
+      "fname": "mahi",
+      "techname": "java",
+      "id": 27
+    },
+    {
+      "fname": "minaxi",
+      "techname": "frontend",
+      "id": 28
+    },
+    {
+      "fname": "minaxi",
+      "techname": "frontend",
+      "id": 29
     }
   ]
 }

@@ -1,33 +1,39 @@
-:root{
-    --purple :rgb(95, 95, 223);
-    --light-blue :rgb(63, 104, 241);
+:root {
+    --purple: rgb(95, 95, 223);
+    --light-blue: rgb(63, 104, 241);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-   
+
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
 }
-.heading{
+
+.heading {
     color: var(--light-blue);
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-label{
+
+label {
     font-size: 20px;
     font-weight: 500;
     color: var(--purple);
-    font-weight : 700; 
+    font-weight: 700;
     margin-left: 15px;
 }
-.btn-save{
+
+.btn-save {
     height: 45px;
     width: 115px;
     background-color: var(--purple);
@@ -36,7 +42,8 @@ label{
     border-radius: 10px;
     cursor: pointer;
 }
-#btn-update{
+
+#btn-update {
     height: 45px;
     width: 115px;
     background-color: var(--purple);
@@ -45,7 +52,8 @@ label{
     border-radius: 10px;
     cursor: pointer;
 }
-#fname{
+
+#fname {
     height: 40px;
     width: 250px;
     border-radius: 5px;
@@ -53,7 +61,8 @@ label{
     border-color: #a59f9f;
     margin-left: 15px;
 }
-#techname{
+
+#techname {
     height: 40px;
     width: 250px;
     border-radius: 5px;
@@ -61,27 +70,32 @@ label{
     border-color: #a59f9f;
     margin-left: 15px;
 }
-#form{
+
+#form {
     padding: 20px;
-   
+
 }
-table{
+
+.myTable {
     border-collapse: collapse;
     width: 70%;
     margin: 0 auto;
     border-spacing: 0;
 }
-table > thead > tr > th {
+
+.myTable>thead>tr>th {
     padding: 15px;
     background-color: teal;
     color: #f8f8fa;
     text-align: justify;
 }
-table > tbody > tr > td {
+
+.myTable>tbody>tr>td {
     padding: 15px;
     border-bottom: 1px solid grey;
     text-align: justify;
 }
+
 /* td{
    border-top: 1px solid white;
    text-align: center;
@@ -94,7 +108,7 @@ thead{
     color: white;
     height: 30px;
 } */
-button{
+button {
     height: 40px;
     width: 80px;
     margin-left: 20px;
@@ -102,33 +116,59 @@ button{
     border-radius: 5px;
     border: 0.5px solid rgb(63, 104, 241);
 }
-.Edit{
+
+.Edit {
     background-color: rgb(130, 231, 130);
     color: green;
     font-size: 15px;
     font-weight: 700;
 
 }
-.btn-delete{
+
+.btn-delete {
     background-color: rgb(230, 79, 52);
     color: white;
     font-size: 15px;
     font-weight: 700;
 }
-tr:nth-child(even){background-color: #d4cece;}
 
-tr:hover {color: rgb(30, 27, 216);}
+tr:nth-child(even) {
+    background-color: #d4cece;
+}
 
-@media screen and (max-width : 600px){
-    table > thead > tr > th{
+tr:hover {
+    color: rgb(30, 27, 216);
+}
+
+#search {
+    width: 300px;
+    padding: 16px;
+    text-indent: 33px;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border: 1px solid #F0F1F3;
+    border-radius: 4px;
+}
+
+.search::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: grey;
+}
+
+@media screen and (max-width : 600px) {
+    table>thead>tr>th {
         display: none;
     }
-    table > tbody > tr > td {
+
+    table>tbody>tr>td {
         display: block;
         width: 100%;
         text-align: right;
     }
-    table > tbody > tr > td::before {
+
+    table>tbody>tr>td::before {
         display: block;
         width: 100%;
         content: arrt();
@@ -136,8 +176,9 @@ tr:hover {color: rgb(30, 27, 216);}
     }
 
 }
-@media screen and (max-width : 756px){
-    .Edit{
+
+@media screen and (max-width : 756px) {
+    .Edit {
         margin-top: 15px;
     }
 }

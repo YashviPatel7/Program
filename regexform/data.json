@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "data": [
+    {
+      "firstname": "yashvi",
+      "lastname": "dddnb",
+      "phonenum": "9876556789",
+      "emailid": "patelyashvi7@gmail.com",
+      "password": "jiPari$23",
+      "salary": "6000",
+      "id": 1
+    },
+    {
+      "firstname": "mahi",
+      "lastname": "patel",
+      "phonenum": "9898765464",
+      "emailid": "patel_7@gmail.com",
+      "password": "Pari45@12",
+      "salary": "8000",
+      "id": 2
+    },
+    {
+      "firstname": "ashish",
+      "lastname": "desai",
+      "phonenum": "9876453234",
+      "emailid": "patelyashvi7@gmail.com",
+      "password": "yash#123",
+      "salary": "7000",
+      "id": 3
+    },
+    {
+      "firstname": "ashish",
+      "lastname": "patel",
+      "phonenum": "9876543234",
+      "emailid": "patelyashvi7@gmail.com",
+      "password": "yash6#E123",
+      "salary": "9000",
+      "id": 4
+    }
+  ]
+}
