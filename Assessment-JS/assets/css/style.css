@@ -92,7 +92,7 @@ li {
 
 .inputtxt {
     height: 32px;
-    width: 313.33px;
+    width: 380px;
     border-radius: 5px;
     border: 1px solid var(--gray-300);
     text-indent: 20px;
@@ -106,9 +106,10 @@ li {
 }
 
 .filedname {
-    font-size: var(--fn-vsm11);
+    font-size: var(--fn-sm12);
     font-weight: var(--fw-600);
     color: var(--gray-700);
+    padding: 20px;
 }
 
 .main-form {
@@ -195,7 +196,7 @@ li {
 }
 
 #status {
-    width: 313px;
+    width: 380px;
     height: 32px;
     background-color: var(--white);
     border: 1px solid var(--gray-300);
@@ -207,6 +208,7 @@ li {
 .myTable {
     padding: 19px 45px;
     width: 100%;
+    border-collapse: collapse;
 }
 
 .tabledata {
@@ -219,7 +221,6 @@ li {
 
 .tablerow {
     text-align: center;
-
 }
 
 td {

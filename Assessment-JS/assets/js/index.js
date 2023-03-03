@@ -82,10 +82,12 @@ btn.addEventListener('click', (e) => {
 
     var namecheck = /^[A-Za-z]{3,25}$/;
     var descripcheck = /^[A-Za-z]{3,150}$/;
+    var filedvalided = /[0-9]/;
 
 
     var custname = document.getElementById('custname');
     var descrip = document.getElementById('descrip');
+    var status = document.getElementById('status');
 
     if (custname == " ") {
         document.getElementById('custnameerror').innerHTML = " required";
@@ -108,7 +110,14 @@ btn.addEventListener('click', (e) => {
         document.getElementById('descriperror').innerHTML = " Description is Invalid ";
         descrip.style.border = "1px solid red";
     }
-
+    if (filedvalided.test(status)) {
+        document.getElementById('statuserror').innerHTML = " ";
+        status.style.border = "1px solid green";
+    }
+    else {
+        document.getElementById('statuserror').innerHTML = " This Field is Required ";
+        status.style.border = "1px solid red";
+    }
 
 });
 //----------------------------------------------------------------

@@ -55,20 +55,21 @@
                 </div>
                 <div>
                     <label for="descrip" class="filedname">STATUS</label><br>
-                    <select id="status" name="status" required>
+                    <select id="status" name="status">
                         <option disabled="disabled" selected="selected">Select Status</option>
                         <option style="color: blue">Open</option>
                         <option style="color:#D12953">Error</option>
                         <option style="color:#5A6376">Inactive</option>
                         <option style="color:#169455">Success</option>
                     </select>
+                    <span id="statuserror" class="text-dangure"></span>
                 </div>
             </div>
             <div class="from-input-wrapper d-flex">
                 <div class="">
                     <label for="rate" class="filedname">RATE</label><br>
                     <input type="number" name="rate" id="rate" class="inputtxt" placeholder="Enter Rate" required><br>
-                    <!-- <span id="rateerror" class="text-dangure"></span> -->
+                    <span id="rateerror" class="text-dangure"></span>
                 </div>
                 <div class="">
                     <label for="balance" class="filedname">BALANCE</label><br>
