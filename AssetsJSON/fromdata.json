@@ -1,0 +1,117 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "fromdata": [
+    {
+      "custname": "annu",
+      "descrip": "yashvi",
+      "status": "Open",
+      "rate": "200",
+      "balance": "200",
+      "deposit": "200",
+      "id": 2
+    },
+    {
+      "custname": "annu",
+      "descrip": "lorem lore lorem",
+      "status": "Error",
+      "rate": "2000",
+      "balance": "40000",
+      "deposit": "2000",
+      "id": 3
+    },
+    {
+      "custname": "annu",
+      "descrip": "lorem lore lorem",
+      "status": "Open",
+      "rate": "200",
+      "balance": "100",
+      "deposit": "100",
+      "id": 4
+    },
+    {
+      "custname": "annu",
+      "descrip": "lorem lore lorem",
+      "status": "Error",
+      "rate": "2000",
+      "balance": "1000",
+      "deposit": "200",
+      "id": 7
+    },
+    {
+      "custname": "annu",
+      "descrip": "lorem lore lorem",
+      "status": "Inactive",
+      "rate": "5000",
+      "balance": "20000",
+      "deposit": "1000",
+      "id": 8
+    },
+    {
+      "custname": "annu",
+      "descrip": "lorem lore lorem",
+      "status": "Inactive",
+      "rate": "2000",
+      "balance": "1000",
+      "deposit": "200",
+      "id": 9
+    },
+    {
+      "custname": "annu",
+      "descrip": "lorem lore lorem",
+      "status": "Success",
+      "rate": "2000",
+      "balance": "5000",
+      "deposit": "200",
+      "id": 10
+    },
+    {
+      "custname": "annu",
+      "descrip": "lorem lore lorem",
+      "status": "Error",
+      "rate": "3000",
+      "balance": "40000",
+      "deposit": "3000",
+      "id": 11
+    },
+    {
+      "custname": "annu",
+      "descrip": "lorem lore lorem",
+      "status": "Inactive",
+      "rate": "2000",
+      "balance": "3000",
+      "deposit": "2000",
+      "id": 12
+    },
+    {
+      "custname": "annu",
+      "descrip": "yashvi",
+      "status": "Open",
+      "rate": "2000",
+      "balance": "300",
+      "deposit": "200",
+      "id": 13
+    },
+    {
+      "custname": "annu",
+      "descrip": "lorem lore lorem",
+      "status": "Inactive",
+      "rate": "2000",
+      "balance": "1000",
+      "deposit": "200",
+      "id": 14
+    }
+  ]
+}

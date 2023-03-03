@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Form</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!--Start : header-->
+    <header>
+        <!-- <section class="card">
+            <ul>
+                <li style="color:#4F5AED">Open</li>
+                <li style="color:#D12953">Error</li>
+                <li style="color:#5A6376">Inactive</li>
+                <li style="color:#169455"> Success</li>
+            </ul>
+        </section> -->
+        <!-- <select id="filter" name="filter" onkeyup="filterData()" class="btn-status">
+            <option disabled="disabled" selected="selected">
+                Status</option>
+            <option style="color:#4F5AED">Open</option>
+            <option style="color:#D12953">Error</option>
+            <option style="color:#5A6376">Inactive</option>
+            <option style="color:#169455">Success</option>
+        </select> -->
+        <nav class="btns-header d-flex">
+            <button class="btn-status"><img src="./assets/images/filter.png" alt="filter" class="margin-right-10">
+                Status</button>
+
+            <button class="btn-add-cutomer"><img src="./assets/images/add.png" alt="add customer"
+                    class="margin-right-10">Add
+                Customer</button>
+        </nav>
+    </header>
+    <!--End : header-->
+    <!--Start : form section-->
+    <section class="main-content">
+        <form class="main-form">
+            <div class="from-input-wrapper d-flex">
+                <div class="">
+                    <label for="custname" class="filedname">NAME</label><br>
+                    <input type="text" name="name" id="custname" class="inputtxt" placeholder="Enter Name"><br>
+                    <span id="custnameerror" class="text-dangure"></span>
+                </div>
+                <div class="">
+                    <label for="descrip" class="filedname">DESCRIPTION</label><br>
+                    <input type="text" name="description" id="descrip" class="inputtxt"
+                        placeholder="Enter Description"><br>
+                    <span id="descriperror" class="text-dangure"></span>
+                </div>
+                <div>
+                    <label for="descrip" class="filedname">STATUS</label><br>
+                    <select id="status" name="status" required>
+                        <option disabled="disabled" selected="selected">Select Status</option>
+                        <option style="color: blue">Open</option>
+                        <option style="color:#D12953">Error</option>
+                        <option style="color:#5A6376">Inactive</option>
+                        <option style="color:#169455">Success</option>
+                    </select>
+                </div>
+            </div>
+            <div class="from-input-wrapper d-flex">
+                <div class="">
+                    <label for="rate" class="filedname">RATE</label><br>
+                    <input type="number" name="rate" id="rate" class="inputtxt" placeholder="Enter Rate" required><br>
+                    <!-- <span id="rateerror" class="text-dangure"></span> -->
+                </div>
+                <div class="">
+                    <label for="balance" class="filedname">BALANCE</label><br>
+                    <input type="number" name="balance" id="balance" class="inputtxt" placeholder="Enter Balance"
+                        required><br>
+                    <!-- <span id="balanceerror" class="text-dangure"></span> -->
+                </div>
+                <div class="">
+                    <label for="deposit" class="filedname">DEPOSIT</label><br>
+                    <input type="number" name="deposit" id="deposit" class="inputtxt" placeholder="Enter Deposit"
+                        required><br>
+                    <!-- <span id="rateerror" class="text-dangure"></span> -->
+                </div>
+            </div>
+        </form>
+        <div class="footer-btns d-flex">
+            <button class="btn-cancel">Cancel</button>
+            <button id="btn-save">Save</button>
+            <button id="btn-update">Update</button>
+        </div>
+    </section>
+
+    <!--End : form section-->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
