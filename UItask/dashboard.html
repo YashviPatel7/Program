@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="dashboard-wrapper d-flex">
+        <!-- Start : sidebar -->
+        <input type="checkbox" id="toggle">
+        <aside class="sidebar">
+            <div class="dashboard-logo d-flex">
+                <h4 class="logo-text">Dashboard Kit</h4>
+            </div>
+            <nav>
+                <ul class="first-items-kit">
+                    <li class="list-item"><a class="item-link"><span
+                                class="fa fa-pie-chart m-right-15"></span>Overview</a></li>
+                    <li class="list-item"><a class="item-link"><span class="fa fa-ticket m-right-15"></span>Tickets</a>
+                    </li>
+                    <li class="list-item"><a class="item-link"><span
+                                class="fa fa-lightbulb-o m-right-15"></span>Ideas</a>
+                    </li>
+                    <li class="list-item"><a class="item-link"><span class="fa fa-users m-right-15"></span>Contacts</a>
+                    </li>
+                    <li class="list-item"><a class="item-link"><span class="fa fa-user m-right-15"></span>Agents</a>
+                    </li>
+                    <li class="list-item"><a class="item-link"><span
+                                class="fa fa-id-card m-right-15"></span>Articles</a></li>
+                </ul>
+                <ul class="second-item-kit">
+                    <li class="list-item"><a class="item-link"><span class="fa fa-cog m-right-15"></span>Settings</a>
+                    </li>
+                    <li class="list-item"><a class="item-link"><span
+                                class="fa fa-subway m-right-15"></span>Subscription</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- End : sidebar -->
+
+        <div class="content-wrapper d-flex">
+            <!-- start : header -->
+
+            <header class="dashboard-header d-flex">
+                <div class="dash-head d-flex">
+                    <label for="toggle" class="fa fa-bars color-gray"></label>
+                    <h3 class="dashboard-heading">Tickets</h3>
+                </div>
+                <div class="user-detail d-flex">
+                    <div class="search">
+                        <span class="fa fa-search icon-color"></span>
+                        <span class="fa fa-bell icon-color m-left-25"></span>
+                    </div>
+                    <div class="user d-flex">
+                        <span class="person m-left-25">Jones Ferdinand</span>
+                        <img src="./assets/images/lady.png" alt="user" class="radius-50 m-left-10">
+                    </div>
+                </div>
+            </header>
+            <main class="main-content d-flex">
+                <div class="content-header d-flex">
+                    <h3 class="content-heading">All tickets</h3>
+                    <div>
+                        <button class="btn-sort"><span class="fa fa-sort-amount-desc m-right-10"></span>
+                            Sort</button>
+                        <button class="btn-sort m-left-25"><span class="fa fa-filter m-right-10"></span>
+                            Filter</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-head">
+                                <th class="table-heading">Ticket details</th>
+                                <th class="table-heading">Customer name</th>
+                                <th class="table-heading">Date</th>
+                                <th class="table-heading">Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td><span class="data-high">HIGH</span></td>
+                                <td> <span class="fa fa-ellipsis-v icon-color"></span></td>
+                            </tr>
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25 ">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-low">LOW</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color"></span></td>
+                            </tr>
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25 ">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-high">HIGH</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color"></span></td>
+                            </tr>
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25 ">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-normal">NORMAL</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color"></span></td>
+                            </tr>
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25 ">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-high">HIGH</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color"></span></td>
+                            </tr>
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-low">LOW</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color"></span></td>
+                            </tr>
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-normal">NORMAL</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color m-right-25"></span></td>
+                            </tr>
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-normal">NORMAL</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color m-right-25"></span></td>
+                            </tr>
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-normal">NORMAL</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color m-right-25"></span></td>
+                            </tr>
+                            <tr>
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-normal">NORMAL</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color m-right-25"></span></td>
+                            </tr class="table-data1">
+                            <tr class="table-data1">
+                                <td><img src="./assets/images/lady.png" alt="lady" class="radius-50 m-left-25">
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Contact Email not Linked<span
+                                            class="table-text">Updated 1 day ago</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">Tom Cruise<span class="table-text">on
+                                            24.05.2019</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-data d-flex">May 26,2019<span class="table-text">6:30 PM</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="data-normal">NORMAL</span>
+                                </td>
+                                <td> <span class="fa fa-ellipsis-v icon-color m-right-25"></span></td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="footer-data">Rows per page:</td>
+                                <td><select name="number" id="" class="footer-data">
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>7</option>
+                                    </select></td>
+                                <td class="footer-data">1-8 of 1240</td>
+                                <td><span class="fa fa-chevron-left icon-color"></span></td>
+                                <td><span class="fa fa-chevron-right icon-color"></span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
