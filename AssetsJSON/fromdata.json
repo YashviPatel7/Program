@@ -26,15 +26,6 @@
     {
       "custname": "annu",
       "descrip": "lorem lore lorem",
-      "status": "Error",
-      "rate": "2000",
-      "balance": "40000",
-      "deposit": "2000",
-      "id": 3
-    },
-    {
-      "custname": "annu",
-      "descrip": "lorem lore lorem",
       "status": "Open",
       "rate": "200",
       "balance": "100",
@@ -80,15 +71,6 @@
     {
       "custname": "annu",
       "descrip": "lorem lore lorem",
-      "status": "Error",
-      "rate": "3000",
-      "balance": "40000",
-      "deposit": "3000",
-      "id": 11
-    },
-    {
-      "custname": "annu",
-      "descrip": "lorem lore lorem",
       "status": "Inactive",
       "rate": "2000",
       "balance": "3000",
@@ -96,22 +78,19 @@
       "id": 12
     },
     {
-      "custname": "annu",
-      "descrip": "yashvi",
-      "status": "Open",
-      "rate": "2000",
-      "balance": "300",
-      "deposit": "200",
-      "id": 13
-    },
-    {
-      "custname": "annu",
+      "custname": "vdgdg",
       "descrip": "lorem lore lorem",
-      "status": "Inactive",
-      "rate": "2000",
-      "balance": "1000",
-      "deposit": "200",
-      "id": 14
+      "status": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {}
+      },
+      "rate": "5545",
+      "balance": "3535",
+      "deposit": "3535",
+      "id": 13
     }
   ]
 }

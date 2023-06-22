@@ -45,6 +45,7 @@ button{
     width: 280px;
     flex-direction: column;
     justify-content: space-between;
+   
     transition: .6s ease-in-out;
 }
 .display-none{
@@ -63,7 +64,11 @@ button{
     align-items: end;
 }
 .item{
-    margin-top: 44px; 
+    margin-top: 18px; 
+    padding: 18px;
+}
+.item:hover{
+    background-color: #858D9D;
 }
 .logo{
     padding-top: 37px;
@@ -92,6 +97,7 @@ button{
 }
 .btn-toggle{
     margin-right: 34px;
+    cursor: pointer;
 }
 .admin-detail{
     justify-content: center;
@@ -309,4 +315,6 @@ td{
         background-color: #DA3E33;
       }
     } */
-    
+    @media screen and (max-width:800px){
+        
+    }

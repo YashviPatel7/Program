@@ -108,7 +108,7 @@
 
         // function to calculate the sum of numbers in an array
         const ourArray = [2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1 , 3, 1];
-        function sumArray(...array) {
+        function sumArray(array) {
            
             let sum = 0;
 
@@ -119,20 +119,7 @@
             return sum;
         }
 
-        document.write(sumArray(...ourArray));
-
-       // array in object
-        let arrayobject = [{
-            title : "pathan",
-            director : "yash raj",
-            alreadyWatched : true
-        },
-        {
-            title : "Yodha",
-            director : "sagar ambre",
-            alreadyWatched : true
-        }
-    ]
+        document.write(sumArray(ourArray));
 
     </script>
 </body>

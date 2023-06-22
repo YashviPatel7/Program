@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arraymethod</title>
+</head>
+<body>
+    <script>
+         let arrSalary=[1000,4000,5000,3000,2000];
+
+         let newarr=arrSalary.map((items)=>items+2);
+
+         console.log(newarr);
+
+         let total=arrSalary.reduce((total,items)=>total=total+items);
+
+         console.log(total);
+
+         let arr1=[1,2,3,4,5,6,7,8,9];
+        let aee2=[];
+         let odd=arr1.filter((items)=>(items%2!==0));
+        console.log(odd);
+
+         let obj={
+            FirstName : "yashvi",
+            LastName : "patel",
+
+            abc:function(name) // simple function
+            {
+                this.FirstName=name;
+            },
+            set xyz(lname){  // set method
+                this.LastName=lname;
+            },
+            fullname: function(){     
+                return ("the name is "+ obj.FirstName+" " +this.LastName)
+            },
+            get pqz(){  // get method
+                return ("my name is  ssss    sssssss"+ obj.FirstName+" " +this.LastName)
+            }
+         }
+         obj.abc("maya");  //simple function caller
+         obj.xyz="rani";   
+        //  console.log(obj.fullname());
+        console.log(obj.pqz);  //get method ma () na aave
+
+
+    </script>
+   
+</body>
+</html>

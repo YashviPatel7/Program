@@ -20,19 +20,20 @@
                 <li style="color:#169455"> Success</li>
             </ul>
         </section> -->
-        <!-- <select id="filter" name="filter" onkeyup="filterData()" class="btn-status">
-            <option disabled="disabled" selected="selected">
-                Status</option>
-            <option style="color:#4F5AED">Open</option>
-            <option style="color:#D12953">Error</option>
-            <option style="color:#5A6376">Inactive</option>
-            <option style="color:#169455">Success</option>
-        </select> -->
-        <nav class="btns-header d-flex">
-            <button class="btn-status"><img src="./assets/images/filter.png" alt="filter" class="margin-right-10">
-                Status</button>
 
-            <button class="btn-add-cutomer"><img src="./assets/images/add.png" alt="add customer"
+        <nav class="btns-header d-flex">
+            <!-- <button class="btn-status"><img src="./assets/images/filter.png" alt="filter" class="margin-right-10">
+                Status</button> -->
+            <select id="filter" name="filter" onchange="filterData()" class="btn-status">
+                <option value="all" selected="selected">
+                    Status</option>
+                <option style="color:#4F5AED" value="Open">Open</option>
+                <option style="color:#D12953" value="Error">Error</option>
+                <option style="color:#5A6376" value="Inactive">Inactive</option>
+                <option style="color:#169455" value="Success">Success</option>
+            </select>
+
+            <button id="addCustomer" class="btn-add-cutomer"><img src="./assets/images/add.png" alt="add customer"
                     class="margin-right-10">Add
                 Customer</button>
         </nav>
@@ -40,60 +41,77 @@
     <!--End : header-->
     <!--Start : form section-->
     <section class="main-content">
-        <form class="main-form">
+        <form class="main-form" id="custForm">
             <div class="from-input-wrapper d-flex">
-                <div class="">
-                    <label for="custname" class="filedname">NAME</label><br>
-                    <input type="text" name="name" id="custname" class="inputtxt" placeholder="Enter Name"><br>
+                <div class="inputflied d-flex">
+                    <label for="custname" class="fieldname">NAME</label>
+                    <input type="text" name="name" id="custname" class="inputtxt" placeholder="Enter Name">
                     <span id="custnameerror" class="text-dangure"></span>
                 </div>
-                <div class="">
-                    <label for="descrip" class="filedname">DESCRIPTION</label><br>
-                    <input type="text" name="description" id="descrip" class="inputtxt"
-                        placeholder="Enter Description"><br>
+                <div class="inputflied d-flex">
+                    <label for="descrip" class="fieldname">DESCRIPTION</label>
+                    <input type="text" name="description" id="descrip" class="inputtxt" placeholder="Enter Description">
                     <span id="descriperror" class="text-dangure"></span>
                 </div>
-                <div>
-                    <label for="descrip" class="filedname">STATUS</label><br>
-                    <select id="status" name="status">
+                <div class="inputflied d-flex">
+                    <label for="descrip" class="fieldname">STATUS</label>
+                    <select id="selectOption" name="status">
                         <option disabled="disabled" selected="selected">Select Status</option>
-                        <option style="color: blue">Open</option>
-                        <option style="color:#D12953">Error</option>
-                        <option style="color:#5A6376">Inactive</option>
-                        <option style="color:#169455">Success</option>
+                        <option value="Open">Open</option>
+                        <option value="Error">Error</option>
+                        <option value="Inactive">Inactive</option>
+                        <option value="Success">Success</option>
                     </select>
                     <span id="statuserror" class="text-dangure"></span>
                 </div>
             </div>
             <div class="from-input-wrapper d-flex">
-                <div class="">
-                    <label for="rate" class="filedname">RATE</label><br>
-                    <input type="number" name="rate" id="rate" class="inputtxt" placeholder="Enter Rate" required><br>
+                <div class="inputflied d-flex">
+                    <label for=" rate" class="fieldname">RATE</label>
+                    <input type="number" name="rate" id="rate" class="inputtxt" placeholder="Enter Rate" required>
                     <span id="rateerror" class="text-dangure"></span>
                 </div>
-                <div class="">
-                    <label for="balance" class="filedname">BALANCE</label><br>
+                <div class="inputflied d-flex">
+                    <label for=" balance" class="fieldname">BALANCE</label>
                     <input type="number" name="balance" id="balance" class="inputtxt" placeholder="Enter Balance"
-                        required><br>
+                        required>
                     <!-- <span id="balanceerror" class="text-dangure"></span> -->
                 </div>
-                <div class="">
-                    <label for="deposit" class="filedname">DEPOSIT</label><br>
-                    <input type="number" name="deposit" id="deposit" class="inputtxt" placeholder="Enter Deposit"
-                        required><br>
+                <div class="inputflied d-flex">
+                    <label for=" deposit" class="fieldname">DEPOSIT</label>
+                    <input type="number" name="deposit" id="deposit" class="inputtxt m-right0"
+                        placeholder="Enter Deposit" required>
                     <!-- <span id="rateerror" class="text-dangure"></span> -->
                 </div>
             </div>
         </form>
         <div class="footer-btns d-flex">
             <button class="btn-cancel">Cancel</button>
-            <button id="btn-save">Save</button>
-            <button id="btn-update">Update</button>
+            <button id="btnSave" onclick="btnsave(event)">Save</button>
+            <button id="btnUpdate">Update</button>
         </div>
     </section>
-
     <!--End : form section-->
-    <script src="./assets/js/index.js"></script>
+    <div class="table-content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="fieldname">#</th>
+                    <th class="fieldname">NAME</th>
+                    <th class="fieldname">DESCRIPTION</th>
+                    <th class="fieldname">STATUS</th>
+                    <th class="fieldname">RATE</th>
+                    <th class="fieldname">BALANCE</th>
+                    <th class="fieldname">DEPOSIT</th>
+                    <th class="fieldname">ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="tableTbody">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
